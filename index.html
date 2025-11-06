@@ -75,7 +75,7 @@
           </div>
         </div>
         <div class="mt-8">
-          <button id="start-quiz-btn" class="flex-1 bg-white text-purple-900 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg">
+          <button id="start-quest-btn" class="flex-1 bg-white text-purple-900 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg">
             🎮 Start Learning Quest
           </button>
         </div>
@@ -119,31 +119,6 @@
       </div>
     </div>
 
-    <!-- Quiz Modal -->
-    <div id="quiz-modal" class="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50 hidden">
-      <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-6">
-          <div class="w-full bg-gray-700 rounded-full h-2">
-            <div id="quiz-progress" class="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full transition-all" style="width: 0%"></div>
-          </div>
-        </div>
-
-        <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-6">
-          <h3 id="quiz-question-text" class="text-2xl font-bold mb-6">Question loading...</h3>
-          <div id="options" class="space-y-3"></div>
-          <div id="explanation-box" class="mt-6 space-y-4 hidden">
-            <div id="result-box" class="border rounded-lg p-4">
-              <p id="explanation-text" class="text-sm"></p>
-            </div>
-          </div>
-        </div>
-
-        <button id="submit-btn" class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 py-4 rounded-xl font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 transition-transform">
-          Submit Answer
-        </button>
-      </div>
-    </div>
-
   </div>
 
   <script>
@@ -178,7 +153,7 @@
           </div>
           <h3 class="text-gray-800">Method 1: COLLABORATE / PROBLEM SOLVE (Win-Win) ⭐ BEST</h3>
           <h4 class="text-gray-800">What It Is:</h4>
-          <p class="text-gray-700">Collaborate means both parties work together to create a COMPLETELY NEW SOLUTION that fully satisfies both sides. This is a \"win-win\" outcome where nobody sacrifices anything. Instead, you create something better than either original option.</p>
+          <p class="text-gray-700">Collaborate means both parties work together to create a COMPLETELY NEW SOLUTION that fully satisfies both sides. This is a "win-win" outcome where nobody sacrifices anything. Instead, you create something better than either original option.</p>
           <h4 class="text-gray-800">Key Characteristics:</h4>
           <ul class="list-disc ml-6 text-gray-700">
             <li><strong>Creates NEW value</strong> - Not choosing between existing options</li>
@@ -197,25 +172,25 @@
           <div class="bg-blue-50 p-4 rounded-lg mb-4">
             <p class="text-gray-800 mb-2">Look for these keywords in answer choices:</p>
             <ul class="list-disc ml-6 text-gray-700">
-                <li>\"Work together to find a new solution\"</li>
-                <li>\"Explore alternative approaches\"</li>
-                <li>\"Create a solution that addresses both concerns\"</li>
-                <li>\"Brainstorm options that satisfy both parties\"</li>
-                <li>\"Problem-solve together\"</li>
+                <li>"Work together to find a new solution"</li>
+                <li>"Explore alternative approaches"</li>
+                <li>"Create a solution that addresses both concerns"</li>
+                <li>"Brainstorm options that satisfy both parties"</li>
+                <li>"Problem-solve together"</li>
             </ul>
           </div>
           <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
             <p class="text-red-700 font-bold mb-2">⚠️ CRITICAL EXAM TRAP #1:</p>
             <p class="text-gray-800">Students constantly confuse Collaborate with Compromise! Here's the difference:</p>
             <ul class="list-disc ml-6 text-gray-700 mt-2">
-                <li><strong>Collaborate:</strong> \"Let's find a NEW solution that gives us BOTH what we want\"</li>
-                <li><strong>Compromise:</strong> \"Let's meet in the middle - we'll BOTH give up something\"</li>
+                <li><strong>Collaborate:</strong> "Let's find a NEW solution that gives us BOTH what we want"</li>
+                <li><strong>Compromise:</strong> "Let's meet in the middle - we'll BOTH give up something"</li>
             </ul>
-            <p class="text-gray-800 mt-3 font-bold">If anyone is sacrificing or \"giving up\" something, it's NOT Collaborate - it's Compromise!</p>
+            <p class="text-gray-800 mt-3 font-bold">If anyone is sacrificing or "giving up" something, it's NOT Collaborate - it's Compromise!</p>
           </div>
           <h3 class="text-gray-800">Method 2: COMPROMISE / RECONCILE (Lose-Lose) ⭐ SECOND BEST</h3>
           <h4 class="text-gray-800">What It Is:</h4>
-          <p class="text-gray-700">Compromise means BOTH parties give up something to reach a middle ground. Both sides sacrifice part of what they wanted to find a solution both can accept. This is actually a \"lose-lose\" because nobody gets everything they wanted - but it's better than ongoing conflict.</p>
+          <p class="text-gray-700">Compromise means BOTH parties give up something to reach a middle ground. Both sides sacrifice part of what they wanted to find a solution both can accept. This is actually a "lose-lose" because nobody gets everything they wanted - but it's better than ongoing conflict.</p>
           <h4 class="text-gray-800">Key Characteristics:</h4>
           <ul class="list-disc ml-6 text-gray-700">
             <li><strong>Both parties sacrifice</strong> - Each gives up something</li>
@@ -239,15 +214,15 @@
           </ul>
           <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
             <p class="text-red-700 font-bold mb-2">⚠️ EXAM WARNING:</p>
-            <p class="text-gray-800">On the exam, if you see two similar-looking answers - one involving \"working together to create a new solution\" (Collaborate) and one involving \"both sides giving up something\" (Compromise) - ALWAYS choose Collaborate! PMI prefers creating new value over sacrifice.</p>
+            <p class="text-gray-800">On the exam, if you see two similar-looking answers - one involving "working together to create a new solution" (Collaborate) and one involving "both sides giving up something" (Compromise) - ALWAYS choose Collaborate! PMI prefers creating new value over sacrifice.</p>
           </div>
           <h3 class="text-gray-800">Method 3: SMOOTH / ACCOMMODATE (Temporary Fix)</h3>
           <h4 class="text-gray-800">What It Is:</h4>
           <p class="text-gray-700">Smoothing means emphasizing areas of agreement while downplaying or avoiding areas of disagreement. You focus on common ground and minimize differences to maintain harmony. This doesn't actually solve the conflict - it just postpones dealing with it.</p>
           <h4 class="text-gray-800">Key Characteristics:</h4>
           <ul class="list-disc ml-6 text-gray-700">
-            <li><strong>Emphasizes agreement</strong> - \"Look what we DO agree on!\"</li>
-            <li><strong>Minimizes disagreement</strong> - \"This difference isn't that important\"</li>
+            <li><strong>Emphasizes agreement</strong> - "Look what we DO agree on!"</li>
+            <li><strong>Minimizes disagreement</strong> - "This difference isn't that important"</li>
             <li><strong>Maintains harmony</strong> - Keeps peace, avoids confrontation</li>
             <li><strong>Temporary solution</strong> - Conflict still exists underneath</li>
             <li><strong>Useful for minor conflicts</strong> - Or when timing is bad</li>
@@ -255,7 +230,7 @@
           <h4 class="text-gray-800">Real-World Example:</h4>
           <div class="bg-purple-50 p-4 rounded-lg mb-4">
             <p class="text-gray-800 mb-2"><strong>Scenario:</strong> Two developers are arguing about coding standards during a critical deadline week.</p>
-            <p class="text-gray-800 mb-2"><strong>Smooth Solution:</strong> PM says: \"I know you both have different preferences for code formatting, but let's remember we're all working toward the same goal - delivering quality software to our customer. Let's focus on meeting this deadline, and we can revisit coding standards at the retrospective.\"</p>
+            <p class="text-gray-800 mb-2"><strong>Smooth Solution:</strong> PM says: "I know you both have different preferences for code formatting, but let's remember we're all working toward the same goal - delivering quality software to our customer. Let's focus on meeting this deadline, and we can revisit coding standards at the retrospective."</p>
             <p class="text-gray-800 font-bold mt-2">Result: Conflict postponed. Team focuses on deadline. BUT the underlying disagreement isn't resolved - it will resurface later.</p>
           </div>
           <h4 class="text-gray-800">When to Use Smooth (Exam Context):</h4>
@@ -271,10 +246,10 @@
           </div>
           <h3 class="text-gray-800">Method 4: FORCE / DIRECT (Win-Lose)</h3>
           <h4 class="text-gray-800">What It Is:</h4>
-          <p class="text-gray-700">Forcing means the person with authority makes the decision, and everyone must follow it. One side wins completely, the other loses completely. This is a \"win-lose\" outcome that creates resentment and damages relationships.</p>
+          <p class="text-gray-700">Forcing means the person with authority makes the decision, and everyone must follow it. One side wins completely, the other loses completely. This is a "win-lose" outcome that creates resentment and damages relationships.</p>
           <h4 class="text-gray-800">Key Characteristics:</h4>
           <ul class="list-disc ml-6 text-gray-700">
-            <li><strong>Authority decides</strong> - \"I'm the PM, we're doing it my way\"</li>
+            <li><strong>Authority decides</strong> - "I'm the PM, we're doing it my way"</li>
             <li><strong>One side wins, other loses</strong> - No compromise</li>
             <li><strong>Fast decision</strong> - No discussion needed</li>
             <li><strong>Damages relationships</strong> - Losing side feels unheard</li>
@@ -283,7 +258,7 @@
           <h4 class="text-gray-800">Real-World Example:</h4>
           <div class="bg-orange-50 p-4 rounded-lg mb-4">
             <p class="text-gray-800 mb-2"><strong>Scenario:</strong> Team debates whether to use automated testing or manual testing. Discussion is going nowhere.</p>
-            <p class="text-gray-800 mb-2"><strong>Force Solution:</strong> PM says: \"I've heard both arguments. We're using automated testing. That's final. Let's move on.\"</p>
+            <p class="text-gray-800 mb-2"><strong>Force Solution:</strong> PM says: "I've heard both arguments. We're using automated testing. That's final. Let's move on."</p>
             <p class="text-gray-800 font-bold mt-2">Result: Decision made quickly. Manual testing advocates feel overruled and may resist implementation.</p>
           </div>
           <h4 class="text-gray-800">When to Use Force (Exam Context):</h4>
@@ -295,7 +270,7 @@
           </ul>
           <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
             <p class="text-red-700 font-bold mb-2">⚠️ CRITICAL EXAM TRAP #2:</p>
-            <p class="text-gray-800 mb-2">PMI HATES the Force/Direct method! Many students choose it because in their real-world job, managers make decisions. But PMI's philosophy is Servant Leadership - facilitate, don't dictate!</p>
+            <p class="text-gray-800">PMI HATES the Force/Direct method! Many students choose it because in their real-world job, managers make decisions. But PMI's philosophy is Servant Leadership - facilitate, don't dictate!</p>
             <p class="text-gray-800 font-bold">On the exam: Only choose Force if the question explicitly mentions emergency, safety issue, or all other options have failed!</p>
           </div>
           <h3 class="text-gray-800">Method 5: WITHDRAW / AVOID (Worst Option)</h3>
@@ -305,14 +280,14 @@
           <ul class="list-disc ml-6 text-gray-700">
             <li><strong>Retreat from conflict</strong> - Walk away, change subject</li>
             <li><strong>Conflict unresolved</strong> - Problem still exists</li>
-            <li><strong>Postpone indefinitely</strong> - \"Let's discuss this later\" (never happens)</li>
+            <li><strong>Postpone indefinitely</strong> - "Let's discuss this later" (never happens)</li>
             <li><strong>Damages project</strong> - Unresolved conflicts fester and grow</li>
             <li><strong>Shows weak leadership</strong> - PM avoiding responsibilities</li>
           </ul>
           <h4 class="text-gray-800">Real-World Example:</h4>
           <div class="bg-red-50 p-4 rounded-lg mb-4">
             <p class="text-gray-800 mb-2"><strong>Scenario:</strong> Two team members are arguing heatedly about project approach in a meeting.</p>
-            <p class="text-gray-800 mb-2"><strong>Withdraw Solution:</strong> PM says: \"Let's table this discussion for now and move on to the next agenda item.\" The conflict is never revisited.</p>
+            <p class="text-gray-800 mb-2"><strong>Withdraw Solution:</strong> PM says: "Let's table this discussion for now and move on to the next agenda item." The conflict is never revisited.</p>
             <p class="text-gray-800 font-bold mt-2">Result: Conflict ignored. It will likely escalate and cause bigger problems later.</p>
           </div>
           <h4 class="text-gray-800">When to Use Withdraw (Exam Context):</h4>
@@ -330,11 +305,11 @@
             <h3 class="text-xl font-bold text-gray-800 mb-4">🎯 EXAM SUCCESS FORMULA: Conflict Resolution</h3>
             <div class="space-y-3 text-gray-800">
                 <p><strong>Step 1:</strong> Read the conflict scenario carefully</p>
-                <p><strong>Step 2:</strong> Ask yourself: \"Can they create a NEW solution together?\" → YES = <span class=\"text-green-600 font-bold\">COLLABORATE</span></p>
-                <p><strong>Step 3:</strong> If Collaborate isn't possible: \"Can both give up something?\" → YES = <span class=\"text-blue-600 font-bold\">COMPROMISE</span></p>
-                <p><strong>Step 4:</strong> Emergency or safety issue? → <span class=\"text-orange-600 font-bold\">FORCE</span> (rarely the answer)</p>
-                <p><strong>Step 5:</strong> Need temporary peace? → <span class=\"text-purple-600 font-bold\">SMOOTH</span> (occasionally the answer)</p>
-                <p><strong>Step 6:</strong> Walk away? → <span class=\"text-red-600 font-bold\">WITHDRAW</span> (almost never the answer)</p>
+                <p><strong>Step 2:</strong> Ask yourself: "Can they create a NEW solution together?" → YES = <span class="text-green-600 font-bold">COLLABORATE</span></p>
+                <p><strong>Step 3:</strong> If Collaborate isn't possible: "Can both give up something?" → YES = <span class="text-blue-600 font-bold">COMPROMISE</span></p>
+                <p><strong>Step 4:</strong> Emergency or safety issue? → <span class="text-orange-600 font-bold">FORCE</span> (rarely the answer)</p>
+                <p><strong>Step 5:</strong> Need temporary peace? → <span class="text-purple-600 font-bold">SMOOTH</span> (occasionally the answer)</p>
+                <p><strong>Step 6:</strong> Walk away? → <span class="text-red-600 font-bold">WITHDRAW</span> (almost never the answer)</p>
             </div>
           </div>
           <h2 class="text-3xl font-bold text-gray-800 mb-6 mt-12">Part 2: Tuckman's Ladder of Team Development</h2>
@@ -347,21 +322,21 @@
                 <li><strong>STORMING questions are 40% of all team questions!</strong></li>
             </ul>
           </div>
-          <p class="text-gray-700 mb-4 text-xl font-bold\">The 5 Stages: Forming → Storming → Norming → Performing → Adjourning</p>
-          <h3 class="text-gray-800\">Stage 1: FORMING (The Beginning)</h3>
-          <h4 class="text-gray-800\">What's Happening:</h4>
-          <p class="text-gray-700\">The team is brand new. Members are polite, formal, and uncertain. They don't know each other well. They're trying to understand their roles, the project goals, and how things will work. Everyone is on their best behavior, avoiding conflict.</p>
-          <h4 class="text-gray-800\">Team Characteristics:</h4>
-          <ul class="list-disc ml-6 text-gray-700\">
+          <p class="text-gray-700 mb-4 text-xl font-bold">The 5 Stages: Forming → Storming → Norming → Performing → Adjourning</p>
+          <h3 class="text-gray-800">Stage 1: FORMING (The Beginning)</h3>
+          <h4 class="text-gray-800">What's Happening:</h4>
+          <p class="text-gray-700">The team is brand new. Members are polite, formal, and uncertain. They don't know each other well. They're trying to understand their roles, the project goals, and how things will work. Everyone is on their best behavior, avoiding conflict.</p>
+          <h4 class="text-gray-800">Team Characteristics:</h4>
+          <ul class="list-disc ml-6 text-gray-700">
             <li><strong>Polite and formal</strong> - Careful language, professional distance</li>
             <li><strong>Uncertain and anxious</strong> - Don't know what to expect</li>
             <li><strong>High dependence on leader</strong> - Look to PM for direction</li>
             <li><strong>Individual focus</strong> - Not yet thinking as team</li>
             <li><strong>Low productivity</strong> - Still figuring out roles and processes</li>
           </ul>
-          <h4 class="text-gray-800\">What the Project Manager Should Do:</h4>
-          <div class="bg-green-50 p-4 rounded-lg mb-4\">
-            <ul class="list-disc ml-6 text-gray-700\">
+          <h4 class="text-gray-800">What the Project Manager Should Do:</h4>
+          <div class="bg-green-50 p-4 rounded-lg mb-4">
+            <ul class="list-disc ml-6 text-gray-700">
                 <li><strong>Provide clear direction</strong> - Team needs structure and guidance</li>
                 <li><strong>Set expectations</strong> - Define roles, responsibilities, goals</li>
                 <li><strong>Create Team Charter</strong> - Establish ground rules, values, communication norms</li>
@@ -370,21 +345,21 @@
                 <li><strong>Be directive</strong> - This is the ONE stage where PMI accepts directive leadership</li>
             </ul>
           </div>
-          <h4 class="text-gray-800\">Real Exam Scenario:</h4>
-          <div class="bg-blue-50 p-4 rounded-lg mb-6\">
-            <p class="text-gray-800 font-italic\">\"You've just assembled a new project team. Team members don't know each other and are unclear about their roles. What should you do FIRST?\"</p>
-            <p class="text-green-600 font-bold mt-3\">ANSWER: Facilitate a kickoff meeting to introduce team members, review the project charter, and establish ground rules.</p>
-            <p class="text-gray-700 mt-2\">This is textbook FORMING stage behavior - team needs direction and structure.</p>
+          <h4 class="text-gray-800">Real Exam Scenario:</h4>
+          <div class="bg-blue-50 p-4 rounded-lg mb-6">
+            <p class="text-gray-800 font-italic">"You've just assembled a new project team. Team members don't know each other and are unclear about their roles. What should you do FIRST?"</p>
+            <p class="text-green-600 font-bold mt-3">ANSWER: Facilitate a kickoff meeting to introduce team members, review the project charter, and establish ground rules.</p>
+            <p class="text-gray-700 mt-2">This is textbook FORMING stage behavior - team needs direction and structure.</p>
           </div>
-          <h3 class="text-gray-800\">Stage 2: STORMING (The Conflict Stage) ⚠️ HEAVILY TESTED!</h3>
-          <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-4\">
-            <p class="text-red-700 font-bold text-lg\">🎯 CRITICAL: 40% of team development questions test STORMING!</p>
-            <p class="text-gray-800 mt-2\">This is THE most important stage to master for the exam. If you see conflict between team members, it's almost always a Storming question.</p>
+          <h3 class="text-gray-800">Stage 2: STORMING (The Conflict Stage) ⚠️ HEAVILY TESTED!</h3>
+          <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-4">
+            <p class="text-red-700 font-bold text-lg">🎯 CRITICAL: 40% of team development questions test STORMING!</p>
+            <p class="text-gray-800 mt-2">This is THE most important stage to master for the exam. If you see conflict between team members, it's almost always a Storming question.</p>
           </div>
-          <h4 class="text-gray-800\">What's Happening:</h4>
-          <p class="text-gray-700\">The \"honeymoon\" is over. Team members are now comfortable enough to show their true opinions and challenge each other. Conflicts emerge as people compete for position, push boundaries, and resist authority. This stage is NORMAL and NECESSARY for team growth - but it's uncomfortable.</p>
-          <h4 class="text-gray-800\">Team Characteristics:</h4>
-          <ul class="list-disc ml-6 text-gray-700\">
+          <h4 class="text-gray-800">What's Happening:</h4>
+          <p class="text-gray-700">The "honeymoon" is over. Team members are now comfortable enough to show their true opinions and challenge each other. Conflicts emerge as people compete for position, push boundaries, and resist authority. This stage is NORMAL and NECESSARY for team growth - but it's uncomfortable.</p>
+          <h4 class="text-gray-800">Team Characteristics:</h4>
+          <ul class="list-disc ml-6 text-gray-700">
             <li><strong>Conflict emerges</strong> - Disagreements about processes, approaches, decisions</li>
             <li><strong>Competition for position</strong> - Power struggles, establishing hierarchy</li>
             <li><strong>Push boundaries</strong> - Test the ground rules established in Forming</li>
@@ -393,9 +368,9 @@
             <li><strong>LOW productivity</strong> - Energy goes into conflict instead of work</li>
             <li><strong>Cliques may form</strong> - Subgroups and alliances</li>
           </ul>
-          <h4 class="text-gray-800\">What the Project Manager Should Do:</h4>
-          <div class="bg-green-50 p-4 rounded-lg mb-4\">
-            <ul class="list-disc ml-6 text-gray-700\">
+          <h4 class="text-gray-800">What the Project Manager Should Do:</h4>
+          <div class="bg-green-50 p-4 rounded-lg mb-4">
+            <ul class="list-disc ml-6 text-gray-700">
                 <li><strong>FACILITATE conflict resolution</strong> - Help team work through conflicts, DON'T resolve conflicts FOR them</li>
                 <li><strong>Coach and guide</strong> - Ask questions, help team discover solutions</li>
                 <li><strong>Encourage collaboration</strong> - Guide toward Collaborate/Compromise methods</li>
@@ -406,28 +381,28 @@
                 <li><strong>Focus on goals</strong> - Remind team of shared objectives</li>
             </ul>
           </div>
-          <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6\">
-            <p class="text-red-700 font-bold mb-2\">⚠️ CRITICAL EXAM TRAP #3:</p>
-            <p class="text-gray-800 mb-2\">When you see a Storming scenario on the exam, your instinct might be to \"take charge\" and make a decision to end the conflict quickly. THIS IS WRONG!</p>
-            <p class="text-gray-800 font-bold\">PMI wants you to FACILITATE the team in resolving their own conflicts. Use Servant Leadership!</p>
-            <p class="text-gray-800 mt-3\">Wrong answer: \"Make the decision yourself\"</p>
-            <p class="text-gray-800\">Right answer: \"Facilitate a meeting where the team can discuss and reach consensus\"</p>
+          <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+            <p class="text-red-700 font-bold mb-2">⚠️ CRITICAL EXAM TRAP #3:</p>
+            <p class="text-gray-800 mb-2">When you see a Storming scenario on the exam, your instinct might be to "take charge" and make a decision to end the conflict quickly. THIS IS WRONG!</p>
+            <p class="text-gray-800 font-bold">PMI wants you to FACILITATE the team in resolving their own conflicts. Use Servant Leadership!</p>
+            <p class="text-gray-800 mt-3">Wrong answer: "Make the decision yourself"</p>
+            <p class="text-gray-800">Right answer: "Facilitate a meeting where the team can discuss and reach consensus"</p>
           </div>
-          <h4 class="text-gray-800\">Real Exam Scenarios:</h4>
-          <div class="bg-blue-50 p-4 rounded-lg mb-6\">
-            <p class="text-gray-800 font-italic mb-3\"><strong>Scenario 1:</strong> \"Two experienced developers on your team are in conflict about the technical approach for a key feature. One developer wants to escalate to you for a decision. What should you do FIRST?\"</p>
-            <p class="text-green-600 font-bold\">ANSWER: Facilitate a meeting where both developers can present their approaches and work together to find the best solution.</p>
-            <p class="text-gray-700 mt-2\"><strong>Why:</strong> Classic Storming behavior. FACILITATE, don't dictate. Let team resolve with your guidance.</p>
-            <hr class=\"my-4\">
-            <p class="text-gray-800 font-italic mb-3\"><strong>Scenario 2:</strong> \"Team members are arguing during sprint planning about story point estimates. The meeting is getting heated. What should you do?\"</p>
-            <p class="text-green-600 font-bold\">ANSWER: Acknowledge the different perspectives and guide the team to use an estimation technique (like planning poker) to reach consensus.</p>
-            <p class="text-gray-700 mt-2\"><strong>Why:</strong> Storming stage. Guide team to structured process for resolution. Don't dictate the estimates.</p>
+          <h4 class="text-gray-800">Real Exam Scenarios:</h4>
+          <div class="bg-blue-50 p-4 rounded-lg mb-6">
+            <p class="text-gray-800 font-italic mb-3"><strong>Scenario 1:</strong> "Two experienced developers on your team are in conflict about the technical approach for a key feature. One developer wants to escalate to you for a decision. What should you do FIRST?"</p>
+            <p class="text-green-600 font-bold">ANSWER: Facilitate a meeting where both developers can present their approaches and work together to find the best solution.</p>
+            <p class="text-gray-700 mt-2"><strong>Why:</strong> Classic Storming behavior. FACILITATE, don't dictate. Let team resolve with your guidance.</p>
+            <hr class="my-4">
+            <p class="text-gray-800 font-italic mb-3"><strong>Scenario 2:</strong> "Team members are arguing during sprint planning about story point estimates. The meeting is getting heated. What should you do?"</p>
+            <p class="text-green-600 font-bold">ANSWER: Acknowledge the different perspectives and guide the team to use an estimation technique (like planning poker) to reach consensus.</p>
+            <p class="text-gray-700 mt-2"><strong>Why:</strong> Storming stage. Guide team to structured process for resolution. Don't dictate the estimates.</p>
           </div>
-          <h3 class="text-gray-800\">Stage 3: NORMING (Finding Rhythm)</h3>
-          <h4 class="text-gray-800\">What's Happening:</h4>
-          <p class="text-gray-700\">The team has worked through the major conflicts and is finding its rhythm. Trust is building. People understand and accept their roles. They're starting to work well together. Collaboration increases. This is where the team starts becoming productive.</p>
-          <h4 class="text-gray-800\">Team Characteristics:</h4>
-          <ul class="list-disc ml-6 text-gray-700\">
+          <h3 class="text-gray-800">Stage 3: NORMING (Finding Rhythm)</h3>
+          <h4 class="text-gray-800">What's Happening:</h4>
+          <p class="text-gray-700">The team has worked through the major conflicts and is finding its rhythm. Trust is building. People understand and accept their roles. They're starting to work well together. Collaboration increases. This is where the team starts becoming productive.</p>
+          <h4 class="text-gray-800">Team Characteristics:</h4>
+          <ul class="list-disc ml-6 text-gray-700">
             <li><strong>Agreement on roles</strong> - Everyone knows their place</li>
             <li><strong>Trust develops</strong> - Team members rely on each other</li>
             <li><strong>Collaboration increases</strong> - Working together more smoothly</li>
@@ -435,9 +410,151 @@
             <li><strong>Commitment to goals</strong> - Team united around objectives</li>
             <li><strong>Open communication</strong> - Share ideas and feedback constructively</li>
           </ul>
-          <h4 class="text-gray-800\">What the Project Manager Should Do:</h4>
-          <div class="bg-green-50 p-4 rounded-lg mb-4\">
-            <ul class="list-disc ml-6 text-gray-700\">
+          <h4 class="text-gray-800">What the Project Manager Should Do:</h4>
+          <div class="bg-green-50 p-4 rounded-lg mb-4">
+            <ul class="list-disc ml-6 text-gray-700">
                 <li><strong>Empower team</strong> - Delegate tasks, trust team to deliver</li>
                 <li><strong>Support collaboration</strong> - Remove impediments, provide resources</li>
-                <li><strong>Recognize achievements</strong> - Celebrate small wins
+                <li><strong>Recognize achievements</strong> - Celebrate small wins</li>
+                <li><strong>Continue coaching</strong> - Help team grow</li>
+                <li><strong>Monitor progress</strong> - Ensure team stays on track</li>
+            </ul>
+          </div>
+          <h4 class="text-gray-800">Real Exam Scenario:</h4>
+          <div class="bg-blue-50 p-4 rounded-lg mb-6">
+            <p class="text-gray-800 font-italic">"Your team is working well together, trust is high, and productivity is increasing. What should you do NEXT?"</p>
+            <p class="text-green-600 font-bold">ANSWER: Empower the team by delegating more responsibility and trusting them to make decisions.</p>
+            <p class="text-gray-700 mt-2">This is textbook NORMING behavior - team is ready for more autonomy.</p>
+          </div>
+          <h3 class="text-gray-800">Stage 4: PERFORMING (Peak Performance)</h3>
+          <h4 class="text-gray-800">What's Happening:</h4>
+          <p class="text-gray-700">The team is functioning at peak performance. Members are highly competent, motivated, and autonomous. They're focused on achieving goals. Conflict is handled constructively. The team is self-managing.</p>
+          <h4 class="text-gray-800">Team Characteristics:</h4>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li><strong>High competence</strong> - Team members skilled and confident</li>
+            <li><strong>High motivation</strong> - Committed to goals</li>
+            <li><strong>Autonomous</strong> - Self-managing, minimal supervision needed</li>
+            <li><strong>Constructive conflict</strong> - Disagreements resolved productively</li>
+            <li><strong>High productivity</strong> - Focused on delivering value</li>
+            <li><strong>Strong relationships</strong> - Trust and collaboration are high</li>
+          </ul>
+          <h4 class="text-gray-800">What the Project Manager Should Do:</h4>
+          <div class="bg-green-50 p-4 rounded-lg mb-4">
+            <ul class="list-disc ml-6 text-gray-700">
+                <li><strong>Delegate heavily</strong> - Trust team to manage their work</li>
+                <li><strong>Remove impediments</strong> - Focus on removing blockers</li>
+                <li><strong>Monitor progress</strong> - Ensure goals are met</li>
+                <li><strong>Provide support</strong> - Available for guidance if needed</li>
+                <li><strong>Celebrate success</strong> - Recognize team achievements</li>
+            </ul>
+          </div>
+          <h4 class="text-gray-800">Real Exam Scenario:</h4>
+          <div class="bg-blue-50 p-4 rounded-lg mb-6">
+            <p class="text-gray-800 font-italic">"Your team is highly skilled, self-motivated, and delivers high-quality work consistently. What is the BEST role for you as PM?"</p>
+            <p class="text-green-600 font-bold">ANSWER: Act as a servant leader, remove impediments, and empower the team.</p>
+            <p class="text-gray-700 mt-2">This is textbook PERFORMING stage behavior - team is self-sufficient.</p>
+          </div>
+          <h3 class="text-gray-800">Stage 5: ADJOURNING (Project Closure)</h3>
+          <h4 class="text-gray-800">What's Happening:</h4>
+          <p class="text-gray-700">The project is ending. The team is disbanding. Members are reflecting on the project and preparing for the next assignment. There may be mixed emotions - pride in accomplishment and sadness at parting.</p>
+          <h4 class="text-gray-800">Team Characteristics:</h4>
+          <ul class="list-disc ml-6 text-gray-700">
+            <li><strong>Reflection</strong> - Looking back on project</li>
+            <li><strong>Disbanding</strong> - Team members moving on</li>
+            <li><strong>Mixed emotions</strong> - Pride, relief, sadness</li>
+            <li><strong>Knowledge transfer</strong> - Sharing lessons learned</li>
+            <li><strong>Documentation</strong> - Finalizing project records</li>
+          </ul>
+          <h4 class="text-gray-800">What the Project Manager Should Do:</h4>
+          <div class="bg-green-50 p-4 rounded-lg mb-4">
+            <ul class="list-disc ml-6 text-gray-700">
+                <li><strong>Conduct lessons learned</strong> - Document successes and failures</li>
+                <li><strong>Celebrate success</strong> - Recognize team contributions</li>
+                <li><strong>Release resources</strong> - Officially release team members</li>
+                <li><strong>Archive documents</strong> - Store project records</li>
+                <li><strong>Transition knowledge</strong> - Hand off to operations</li>
+            </ul>
+          </div>
+          <h4 class="text-gray-800">Real Exam Scenario:</h4>
+          <div class="bg-blue-50 p-4 rounded-lg mb-6">
+            <p class="text-gray-800 font-italic">"Your project is complete. What is the MOST important activity to conduct now?"</p>
+            <p class="text-green-600 font-bold">ANSWER: Conduct a lessons learned session to capture knowledge for future projects.</p>
+            <p class="text-gray-700 mt-2">This is textbook ADJOURNING stage behavior - team is wrapping up.</p>
+          </div>
+          <div class="bg-green-100 border-l-4 border-green-500 p-6 mt-8 mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">🎯 EXAM SUCCESS FORMULA: Tuckman's Ladder</h3>
+            <div class="space-y-3 text-gray-800">
+                <p><strong>Step 1:</strong> Identify the stage based on team behavior</p>
+                <p><strong>Step 2:</strong> Match the PM action to the stage</p>
+                <p><strong>Step 3:</strong> Remember: Storming = FACILITATE (not dictate!)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // ========== STATE ==========
+    let currentDay = 1;
+    let xp = 0;
+    let level = 1;
+    let completedDays = [];
+
+    // ========== SAVE/LOAD ==========
+    function loadState() {
+      const saved = localStorage.getItem('pmpQuestState');
+      if (saved) {
+        const state = JSON.parse(saved);
+        currentDay = state.currentDay || 1;
+        xp = state.xp || 0;
+        level = state.level || 1;
+        completedDays = state.completedDays || [];
+      }
+    }
+
+    function saveState() {
+      const state = { currentDay, xp, level, completedDays };
+      localStorage.setItem('pmpQuestState', JSON.stringify(state));
+    }
+
+    // ========== EVENT HANDLER ==========
+    function startLearningQuest() {
+      // Mark Day 1 as completed
+      if (!completedDays.includes(1)) {
+        completedDays.push(1);
+        xp += 150;
+        saveState();
+        alert('🎉 Day 1 marked complete! 150 XP earned!');
+      }
+
+      // Show the full Day 1 lesson
+      document.getElementById('main-content').innerHTML = day1Content;
+      
+      // Add a "Back to Tracker" button
+      const backButton = document.createElement('button');
+      backButton.innerHTML = '← Back to Tracker';
+      backButton.className = 'ml-4 text-sm bg-white text-purple-900 px-3 py-1 rounded';
+      backButton.onclick = () => window.location.reload();
+      document.querySelector('h1').insertAdjacentElement('afterend', backButton);
+    }
+
+    // ========== INIT ==========
+    function init() {
+      loadState();
+      document.getElementById('xp').textContent = xp;
+      document.getElementById('level').textContent = level;
+      document.getElementById('next-level-xp').textContent = level * 1000;
+      document.getElementById('xp-progress').style.width = `${(xp % 1000) / 10}%`;
+      
+      // Bind the event handler to the button
+      document.getElementById('start-quest-btn').addEventListener('click', startLearningQuest);
+    }
+
+    // Start app
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
