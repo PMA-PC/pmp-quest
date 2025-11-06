@@ -36,7 +36,6 @@
         <div class="flex gap-6">
           <div class="text-center">
             <div class="flex items-center gap-2 mb-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" class="text-yellow-400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87.69 6.88L12 21l-5.69-.48.69-6.88-5-4.87 6.91-1.01L12 2z"/></svg>
               <span class="text-2xl font-bold">Level <span id="level">1</span></span>
             </div>
             <div class="w-48 bg-gray-700 rounded-full h-3">
@@ -46,14 +45,12 @@
           </div>
           <div class="text-center">
             <div class="flex items-center gap-2 mb-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" class="text-orange-400"><path d="M12 2c1.2 0 2.3.5 3.1 1.3.9.9 1.4 2.1 1.4 3.4 0 2.4-1.4 4.6-3.6 5.6-1.6.8-3.4.8-5 0-2.2-1-3.6-3.2-3.6-5.6 0-1.3.5-2.5 1.4-3.4C9.7 2.5 10.8 2 12 2zm0 0v12c0 1.7 1.3 3 3 3s3-1.3 3-3V2h-6z"/></svg>
               <span class="text-2xl font-bold"><span id="streak">0</span></span>
             </div>
             <p class="text-xs text-white/70">Day Streak</p>
           </div>
           <div class="text-center">
             <div class="flex items-center gap-2 mb-1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" class="text-purple-400"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87.69 6.88L12 21l-5.69-.48.69-6.88-5-4.87 6.91-1.01L12 2z"/></svg>
               <span class="text-2xl font-bold"><span id="badges-count">0</span></span>
             </div>
             <p class="text-xs text-white/70">Badges</p>
@@ -64,99 +61,15 @@
 
     <!-- Main Content -->
     <div id="main-content" class="space-y-8">
-      <!-- Day Card -->
+      <!-- Day Card (Dynamically populated) -->
       <div id="day-card" class="rounded-2xl p-8 shadow-2xl">
-        <div class="flex justify-between items-start mb-4">
-          <div>
-            <div class="text-sm font-bold text-white/80 mb-1">DAY <span id="current-day-num">1</span> • <span id="current-domain">PEOPLE</span> DOMAIN</div>
-            <h2 id="day-title" class="text-3xl font-bold mb-2">Conflict Resolution & Leadership</h2>
-            <div class="text-white/90 mb-4"><span id="difficulty">⭐⭐</span> <span id="critical-tag" class="hidden">• CRITICAL!</span></div>
-          </div>
-          <div class="text-right">
-            <div class="text-sm text-white/80">Reward</div>
-            <div class="text-2xl font-bold">+<span id="xp-reward">150</span> XP</div>
-          </div>
-        </div>
-
-        <div class="bg-black/20 rounded-xl p-4 mb-4">
-          <h3 class="font-bold mb-2 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87.69 6.88L12 21l-5.69-.48.69-6.88-5-4.87 6.91-1.01L12 2z"/></svg>
-            Key Concepts
-          </h3>
-          <div id="concepts" class="flex flex-wrap gap-2">
-            <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Conflict Resolution Methods</span>
-            <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Tuckman's Ladder</span>
-            <span class="bg-white/20 px-3 py-1 rounded-full text-sm">Servant Leadership</span>
-          </div>
-        </div>
-
-        <div id="pitfall-container" class="bg-red-900/30 border-2 border-red-400/50 rounded-xl p-4 mb-4">
-          <h3 class="font-bold mb-2 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87.69 6.88L12 21l-5.69-.48.69-6.88-5-4.87 6.91-1.01L12 2z"/></svg>
-            ⚠️ Common Pitfall
-          </h3>
-          <p id="pitfall" class="text-sm">Many confuse 'Smooth/Accommodate' with 'Compromise'—learn the key difference!</p>
-        </div>
-
-        <div class="bg-white/10 rounded-xl p-4 mb-6">
-          <h3 class="font-bold mb-2 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87.69 6.88L12 21l-5.69-.48.69-6.88-5-4.87 6.91-1.01L12 2z"/></svg>
-            Today's Activity
-          </h3>
-          <p id="activity" class="text-sm">Role-play: Resolve a team conflict scenario</p>
-        </div>
-
-        <div class="flex gap-4">
-          <button id="start-quiz-btn" class="flex-1 bg-white text-purple-900 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg">
-            🎮 Start Learning Quest
-          </button>
-          <button id="next-day-btn" class="hidden flex-1 bg-green-500 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
-            Next Day →
-          </button>
-        </div>
+        <!-- Will be filled by JS -->
       </div>
 
       <!-- Journey Map -->
       <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
-        <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87.69 6.88L12 21l-5.69-.48.69-6.88-5-4.87 6.91-1.01L12 2z"/></svg>
-          30-Day Journey Map
-        </h3>
-        <div id="journey-map" class="grid grid-cols-5 sm:grid-cols-10 gap-3">
-          <!-- Will be populated by JS -->
-        </div>
-        <div class="flex flex-wrap gap-4 mt-4 text-sm">
-          <div class="flex items-center gap-2"><div class="w-4 h-4 bg-green-500 rounded"></div> Completed</div>
-          <div class="flex items-center gap-2"><div class="w-4 h-4 bg-blue-500 rounded"></div> Current</div>
-          <div class="flex items-center gap-2"><div class="w-4 h-4 bg-white/20 rounded"></div> Available</div>
-          <div class="flex items-center gap-2"><div class="w-4 h-4 bg-gray-700 rounded"></div> Locked</div>
-          <div class="flex items-center gap-2"><div class="w-4 h-4 bg-red-600 rounded ring-2 ring-red-400"></div> Boss Battle</div>
-          <div class="flex items-center gap-2"><div class="w-4 h-4 bg-orange-600 rounded ring-2 ring-orange-400"></div> Critical Topic</div>
-        </div>
-      </div>
-
-      <!-- Badges -->
-      <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
-        <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87.69 6.88L12 21l-5.69-.48.69-6.88-5-4.87 6.91-1.01L12 2z"/></svg>
-          Badge Collection
-        </h3>
-        <div id="badges-grid" class="grid grid-cols-2 sm:grid-cols-5 gap-4">
-          <!-- Will be populated by JS -->
-        </div>
-      </div>
-
-      <!-- Tips -->
-      <div class="mt-8 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-6">
-        <h3 class="text-xl font-bold mb-4">💡 Quick PMP Tips</h3>
-        <ul class="space-y-2 text-sm text-white/90">
-          <li>• <strong>EVM Formulas:</strong> Memorize CPI=EV/AC, SPI=EV/PV. CPI less than 1 = over budget, SPI less than 1 = behind schedule</li>
-          <li>• <strong>Contract Risk:</strong> Fixed Price = Seller risk, Cost Reimbursable = Buyer risk</li>
-          <li>• <strong>Conflict Resolution:</strong> Collaborate > Compromise > Smooth > Force > Withdraw</li>
-          <li>• <strong>Risk Strategies:</strong> Negative: Avoid, Transfer, Mitigate, Accept | Positive: Exploit, Share, Enhance, Accept</li>
-          <li>• <strong>Communication Channels:</strong> n(n-1)/2 where n = number of people</li>
-          <li>• <strong>PMI Mindset:</strong> Servant Leader first, Collaborate over Command, Follow the process!</li>
-        </ul>
+        <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">30-Day Journey Map</h3>
+        <div id="journey-map" class="grid grid-cols-5 sm:grid-cols-10 gap-3"></div>
       </div>
     </div>
 
@@ -164,607 +77,142 @@
     <div id="quiz-modal" class="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50 hidden">
       <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-6">
-          <div class="flex justify-between items-center mb-4">
-            <div class="flex items-center gap-4">
-              <div class="flex items-center gap-2">
-                {[...Array(3)].map((_, i) => (
-                  <svg key={i} xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class={`w-6 h-6 ${i < 3 ? 'text-red-500' : 'text-gray-600'}`}>
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87.69 6.88L12 21l-5.69-.48.69-6.88-5-4.87 6.91-1.01L12 2z"/>
-                  </svg>
-                ))}
-              </div>
-              <div class="text-sm">Question <span id="quiz-question-num">1</span>/<span id="quiz-total-questions">2</span></div>
-            </div>
-            <div class="flex gap-2">
-              <button id="hint-btn" class="px-3 py-1 bg-yellow-500/20 rounded-lg text-sm disabled:opacity-50">
-                💡 Hint (<span id="hints-left">3</span>)
-              </button>
-              <button id="skip-btn" class="px-3 py-1 bg-blue-500/20 rounded-lg text-sm disabled:opacity-50">
-                ⏭️ Skip (<span id="skips-left">2</span>)
-              </button>
-            </div>
-          </div>
           <div class="w-full bg-gray-700 rounded-full h-2">
             <div id="quiz-progress" class="bg-gradient-to-r from-green-500 to-blue-500 h-2 rounded-full transition-all" style="width: 0%"></div>
           </div>
         </div>
 
         <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-6">
-          <h3 id="quiz-question-text" class="text-2xl font-bold mb-6">Your question here</h3>
-          
-          <div id="hint-box" class="bg-yellow-500/20 border border-yellow-500/50 rounded-lg p-4 mb-6 hidden">
-            <div class="flex items-start gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87.69 6.88L12 21l-5.69-.48.69-6.88-5-4.87 6.91-1.01L12 2z"/></svg>
-              <p id="hint-text" class="text-sm text-yellow-100">Hint goes here</p>
-            </div>
-          </div>
-
-          <div id="options" class="space-y-3">
-            <!-- Options will be populated by JS -->
-          </div>
-
+          <h3 id="quiz-question-text" class="text-2xl font-bold mb-6">Question loading...</h3>
+          <div id="options" class="space-y-3"></div>
           <div id="explanation-box" class="mt-6 space-y-4 hidden">
             <div id="result-box" class="border rounded-lg p-4">
-              <h4 class="font-bold mb-2">✨ Explanation:</h4>
               <p id="explanation-text" class="text-sm"></p>
-            </div>
-            <div class="border border-orange-500/50 bg-orange-500/10 rounded-lg p-4">
-              <h4 class="font-bold mb-2">⚠️ Common Pitfall:</h4>
-              <p id="pitfall-text" class="text-sm"></p>
             </div>
           </div>
         </div>
 
-        <div class="flex gap-4">
-          <button id="submit-btn" class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 py-4 rounded-xl font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 transition-transform">
-            Submit Answer
-          </button>
-          <button id="next-btn" class="hidden flex-1 bg-gradient-to-r from-green-600 to-blue-600 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
-            Next Question →
-          </button>
-          <button id="complete-btn" class="hidden flex-1 bg-gradient-to-r from-green-600 to-blue-600 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
-            Complete Day! 🎉
-          </button>
-        </div>
+        <button id="submit-btn" class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 py-4 rounded-xl font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 transition-transform">
+          Submit Answer
+        </button>
       </div>
     </div>
 
   </div>
 
   <script>
-    // ========== CURRICULUM DATA ==========
-    const curriculum = [
-      {
-        day: 1,
-        domain: "People",
-        title: "Conflict Resolution & Leadership",
-        color: "bg-purple-500",
-        difficulty: "⭐⭐",
-        concepts: ["Conflict Resolution Methods", "Tuckman's Ladder", "Servant Leadership"],
-        commonPitfall: "Many confuse 'Smooth/Accommodate' with 'Compromise'—learn the key difference!",
-        activity: "Role-play: Resolve a team conflict scenario",
-        xpReward: 150
-      },
-      {
-        day: 2,
-        domain: "People",
-        title: "Team Building & Training",
-        color: "bg-purple-500",
-        difficulty: "⭐⭐",
-        concepts: ["Resource Requirements", "Skills Assessment", "Team Charter"],
-        commonPitfall: "Don't skip the Team Charter—it's tested heavily in situational questions!",
-        activity: "Create a Team Charter outline",
-        xpReward: 150
-      },
-      {
-        day: 3,
-        domain: "People",
-        title: "Performance & Empowerment",
-        color: "bg-purple-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["Herzberg's Theory", "Maslow's Hierarchy", "Coaching vs Mentoring"],
-        commonPitfall: "Exam loves to test the difference between coaching, mentoring, and directing!",
-        activity: "Analyze motivation scenarios",
-        xpReward: 200
-      },
-      {
-        day: 4,
-        domain: "People",
-        title: "Impediments & Blockers",
-        color: "bg-purple-500",
-        difficulty: "⭐⭐",
-        concepts: ["Impediment Identification", "Prioritization", "Servant Leader Role"],
-        commonPitfall: "Remember: Removing impediments is a core Servant Leader function!",
-        activity: "Impediment removal exercise",
-        xpReward: 150
-      },
-      {
-        day: 5,
-        domain: "People",
-        title: "Negotiation & Agreements",
-        color: "bg-purple-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["BATNA", "Negotiation Strategies", "Win-Win vs Win-Lose"],
-        commonPitfall: "BATNA questions are tricky—know when to walk away!",
-        activity: "Negotiation simulation",
-        xpReward: 200
-      },
-      {
-        day: 6,
-        domain: "People",
-        title: "Stakeholder Collaboration",
-        color: "bg-purple-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["Power/Interest Grid", "Engagement Assessment Matrix", "Trust Building"],
-        commonPitfall: "Power/Interest Grid placement is critical for exam scenarios!",
-        activity: "Stakeholder mapping exercise",
-        xpReward: 200
-      },
-      {
-        day: 7,
-        domain: "People",
-        title: "Emotional Intelligence & Consensus",
-        color: "bg-purple-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["5 Components of EQ", "Building Consensus", "Shared Understanding"],
-        commonPitfall: "EQ scenarios test self-awareness vs empathy—critical distinction!",
-        activity: "EQ component analysis",
-        xpReward: 200
-      },
-      {
-        day: 8,
-        domain: "People",
-        title: "Virtual Teams & Mentoring",
-        color: "bg-purple-500",
-        difficulty: "⭐⭐",
-        concepts: ["Virtual Team Management", "Communication Tools", "Ground Rules"],
-        commonPitfall: "Virtual team questions focus on communication channels—memorize the formula!",
-        activity: "Virtual team setup",
-        xpReward: 150
-      },
-      {
-        day: 9,
-        domain: "People",
-        title: "⚔️ BOSS BATTLE: People Domain",
-        color: "bg-red-600",
-        difficulty: "⭐⭐⭐⭐⭐",
-        concepts: ["Comprehensive People Domain Review"],
-        commonPitfall: "This is your first major test—42% of exam weight!",
-        activity: "40-question timed mock exam",
-        xpReward: 500
-      },
-      {
-        day: 10,
-        domain: "People",
-        title: "People Domain Deep Dive",
-        color: "bg-purple-400",
-        difficulty: "⭐⭐⭐",
-        concepts: ["Weak Area Analysis", "Targeted Review"],
-        commonPitfall: "Focus on your missed questions—patterns matter!",
-        activity: "Analyze Day 9 results",
-        xpReward: 250
-      },
-      {
-        day: 11,
-        domain: "Process",
-        title: "Methodology & Value",
-        color: "bg-blue-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["Predictive vs Agile", "Hybrid Approach", "Value Stream"],
-        commonPitfall: "Agile mindset vs Predictive—exam tests when to use each!",
-        activity: "Methodology selection scenarios",
-        xpReward: 200
-      },
-      {
-        day: 12,
-        domain: "Process",
-        title: "Scope Management",
-        color: "bg-blue-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["WBS", "Product vs Project Scope", "Backlog Management"],
-        commonPitfall: "Product Scope ≠ Project Scope—exam loves this distinction!",
-        activity: "Create WBS structure",
-        xpReward: 200
-      },
-      {
-        day: 13,
-        domain: "Process",
-        title: "⚠️ Schedule Management (CRITICAL)",
-        color: "bg-orange-500",
-        difficulty: "⭐⭐⭐⭐⭐",
-        concepts: ["Critical Path Method", "Crashing vs Fast-Tracking", "Story Points"],
-        commonPitfall: "CPM calculations are HIGH-RISK—practice extensively!",
-        activity: "CPM calculation drills",
-        xpReward: 300
-      },
-      {
-        day: 14,
-        domain: "Process",
-        title: "⚠️ Cost Management (EVM ALERT)",
-        color: "bg-orange-500",
-        difficulty: "⭐⭐⭐⭐⭐",
-        concepts: ["EVM Formulas", "CPI, SPI, EAC, ETC", "Budget Monitoring"],
-        commonPitfall: "EVM is the #1 failure point—memorize ALL formulas!",
-        activity: "EVM calculation marathon",
-        xpReward: 300
-      },
-      {
-        day: 15,
-        domain: "Process",
-        title: "Quality Management",
-        color: "bg-blue-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["QA vs QC", "Quality Tools", "Inspection vs Prevention"],
-        commonPitfall: "QA (process) vs QC (deliverable)—know the difference!",
-        activity: "Quality scenario analysis",
-        xpReward: 200
-      },
-      {
-        day: 16,
-        domain: "Process",
-        title: "Resource Management",
-        color: "bg-blue-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["Resource Leveling", "Resource Smoothing", "Physical Resources"],
-        commonPitfall: "Leveling changes end date, Smoothing doesn't—critical!",
-        activity: "Resource allocation exercise",
-        xpReward: 200
-      },
-      {
-        day: 17,
-        domain: "Process",
-        title: "⚠️ Risk Management Part 1 (CRITICAL)",
-        color: "bg-orange-500",
-        difficulty: "⭐⭐⭐⭐",
-        concepts: ["Risk Identification", "Qualitative vs Quantitative", "Risk Register"],
-        commonPitfall: "Qual vs Quant analysis—exam tests when to use each!",
-        activity: "Risk Register creation",
-        xpReward: 250
-      },
-      {
-        day: 18,
-        domain: "Process",
-        title: "⚠️ Risk Management Part 2 (CRITICAL)",
-        color: "bg-orange-500",
-        difficulty: "⭐⭐⭐⭐⭐",
-        concepts: ["Risk Response Strategies", "EMV", "Secondary vs Residual Risks"],
-        commonPitfall: "Negative vs Positive risk strategies—memorize all 8!",
-        activity: "Risk response scenarios",
-        xpReward: 300
-      },
-      {
-        day: 19,
-        domain: "Process",
-        title: "Issue Management",
-        color: "bg-blue-500",
-        difficulty: "⭐⭐",
-        concepts: ["Issue vs Risk", "Issue Log", "Escalation"],
-        commonPitfall: "Issues are risks that occurred—key distinction!",
-        activity: "Issue tracking exercise",
-        xpReward: 150
-      },
-      {
-        day: 20,
-        domain: "Process",
-        title: "Communication Management",
-        color: "bg-blue-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["Communication Channels Formula", "Stakeholder Needs", "Methods"],
-        commonPitfall: "Channel formula: n(n-1)/2—memorize it!",
-        activity: "Communication planning",
-        xpReward: 200
-      },
-      {
-        day: 21,
-        domain: "Process",
-        title: "⚠️ Procurement (CRITICAL)",
-        color: "bg-orange-500",
-        difficulty: "⭐⭐⭐⭐⭐",
-        concepts: ["Fixed Price vs Cost Reimbursable", "T&M", "Risk Allocation"],
-        commonPitfall: "Who bears the risk? Buyer vs Seller—most tested!",
-        activity: "Contract type scenarios",
-        xpReward: 300
-      },
-      {
-        day: 22,
-        domain: "Process",
-        title: "⚠️ Change Management (CRITICAL)",
-        color: "bg-orange-500",
-        difficulty: "⭐⭐⭐⭐",
-        concepts: ["Change Control Board", "Change Request Process", "Baselines"],
-        commonPitfall: "Change process flow—know every step in order!",
-        activity: "Change request workflow",
-        xpReward: 250
-      },
-      {
-        day: 23,
-        domain: "Process",
-        title: "Integration & Artifacts",
-        color: "bg-blue-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["Project Management Plan", "Governance", "Artifacts"],
-        commonPitfall: "Integration ties everything together—big picture thinking!",
-        activity: "Artifact identification",
-        xpReward: 200
-      },
-      {
-        day: 24,
-        domain: "Process",
-        title: "Closure & Knowledge Transfer",
-        color: "bg-blue-500",
-        difficulty: "⭐⭐",
-        concepts: ["Administrative Closure", "Contract Closure", "Lessons Learned"],
-        commonPitfall: "Two types of closure—don't mix them up!",
-        activity: "Closure checklist",
-        xpReward: 150
-      },
-      {
-        day: 25,
-        domain: "Process",
-        title: "⚔️ FINAL BOSS: Process Domain",
-        color: "bg-red-600",
-        difficulty: "⭐⭐⭐⭐⭐",
-        concepts: ["Comprehensive Process Domain Review"],
-        commonPitfall: "50% of exam—the make-or-break domain!",
-        activity: "90-question timed mock exam",
-        xpReward: 800
-      },
-      {
-        day: 26,
-        domain: "Business",
-        title: "Compliance & External Changes",
-        color: "bg-green-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["Legal/Regulatory Compliance", "Market Changes", "Scope Impact"],
-        commonPitfall: "External changes affect scope—know the process!",
-        activity: "Compliance scenarios",
-        xpReward: 200
-      },
-      {
-        day: 27,
-        domain: "Business",
-        title: "Benefits & Value Delivery",
-        color: "bg-green-500",
-        difficulty: "⭐⭐⭐",
-        concepts: ["Benefits Management Plan", "Output vs Outcome", "Organizational Change"],
-        commonPitfall: "Output (deliverable) ≠ Outcome (value)—critical!",
-        activity: "Benefits realization planning",
-        xpReward: 200
-      },
-      {
-        day: 28,
-        domain: "Final",
-        title: "⚔️ ULTIMATE EXAM SIMULATION",
-        color: "bg-yellow-500",
-        difficulty: "⭐⭐⭐⭐⭐",
-        concepts: ["Full 180-Question Exam"],
-        commonPitfall: "This is IT—treat like the real exam!",
-        activity: "180 questions, 230 minutes",
-        xpReward: 1500
-      },
-      {
-        day: 29,
-        domain: "Final",
-        title: "🎯 Targeted Weakness Review",
-        color: "bg-yellow-400",
-        difficulty: "⭐⭐⭐⭐",
-        concepts: ["Gap Analysis", "Formula Review", "Agile/Hybrid Focus"],
-        commonPitfall: "Focus on Day 28 mistakes—no new material!",
-        activity: "Weakness elimination drills",
-        xpReward: 500
-      },
-      {
-        day: 30,
-        domain: "Final",
-        title: "🏆 Final Prep & Rest Day",
-        color: "bg-yellow-300",
-        difficulty: "⭐",
-        concepts: ["Formula Quick Review", "Mindset Preparation"],
-        commonPitfall: "REST is critical—no heavy studying!",
-        activity: "Light review + rest",
-        xpReward: 300
-      }
-    ];
+    // ========== DAY 1 FULL CONTENT FROM YOUR FILE ==========
+    const day1Content = `
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 mb-6 shadow-xl">
+          <h1 class="text-4xl font-bold mb-2">Day 1: Conflict Resolution & Leadership</h1>
+          <p class="text-xl">People Domain (42% of Exam) • 8-10 Questions</p>
+          <div class="mt-4 bg-white/20 rounded-lg p-4">
+            <p class="font-bold">🎯 EXAM WEIGHT: This lesson covers 8-10 questions on your exam</p>
+            <p class="text-sm">Master this completely = Guaranteed 8-10 points!</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg mb-6 lesson-content">
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-3">📚 Learning Objectives</h2>
+            <p class="text-gray-800">By the end of this lesson, you will be able to:</p>
+            <ul class="list-disc ml-6 text-gray-800 mt-2">
+              <li>Identify and apply all 5 conflict resolution methods in exam scenarios</li>
+              <li>Recognize team development stages and appropriate PM actions for each</li>
+              <li>Apply Servant Leadership principles to situational questions</li>
+              <li>Score 90%+ on conflict and leadership questions</li>
+            </ul>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Part 1: The 5 Conflict Resolution Methods</h2>
+          <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Why This Matters for the Exam</h3>
+            <p class="text-gray-800">Conflict resolution appears in 8-10 questions on EVERY PMP exam. PMI has a specific preference order for these methods. Knowing this order is the difference between passing and failing conflict questions.</p>
+            <p class="text-gray-800 font-bold mt-3">PMI's Preference Order (Best to Worst):</p>
+            <p class="text-gray-800">Collaborate > Compromise > Smooth > Force > Withdraw</p>
+          </div>
+          <h3 class="text-gray-800">Method 1: COLLABORATE / PROBLEM SOLVE (Win-Win) ⭐ BEST</h3>
+          <p class="text-gray-700">Collaborate means both parties work together to create a COMPLETELY NEW SOLUTION that fully satisfies both sides...</p>
+        </div>
+      </div>
+    `;
 
-    // ========== SAMPLE QUESTIONS ==========
-    const sampleQuestions = {
-      1: [
-        {
-          question: "Your team is in the Storming phase and two senior developers are in conflict about the technical approach. One developer wants to escalate to you immediately. As a Servant Leader, what should you do FIRST?",
-          options: [
-            "A) Escalate to upper management to get a decision",
-            "B) Facilitate a meeting where both developers can discuss their approaches",
-            "C) Make the decision yourself based on your technical knowledge",
-            "D) Tell them to figure it out themselves—it's their responsibility"
-          ],
-          correct: 1,
-          explanation: "B is correct. Servant Leadership emphasizes facilitation and empowering the team to resolve conflicts. In the Storming phase, the PM should facilitate collaboration, not dictate solutions. PMI values team empowerment over directive management.",
-          hint: "Think about the Servant Leader role—what does a servant do? They facilitate, not command.",
-          pitfall: "Many choose C because they want to 'take charge,' but PMI emphasizes collaboration over directive leadership in most scenarios."
-        },
-        {
-          question: "During a retrospective, a team member suggests using the Compromise/Reconcile conflict resolution method for an ongoing dispute. What is the PRIMARY characteristic of this approach?",
-          options: [
-            "A) One party wins, the other loses",
-            "B) Both parties give up something to reach a solution",
-            "C) The issue is temporarily set aside",
-            "D) A new solution is created that fully satisfies both parties"
-          ],
-          correct: 1,
-          explanation: "B is correct. Compromise means both parties sacrifice something—it's a 'lose-lose' where both give up something to find middle ground. Don't confuse with Collaborate (D), which creates a 'win-win' solution.",
-          hint: "The key word is 'Compromise'—what does that mean in everyday language?",
-          pitfall: "Don't confuse Compromise with Collaborate! Compromise = both lose something. Collaborate = both win (problem-solve together)."
-        }
-      ],
-      13: [
-        {
-          question: "Your project has activities with these durations: A(5), B(3), C(4), D(6). Path 1: A→C (9 days), Path 2: B→D (9 days). Both paths are equal. What should you focus on?",
-          options: [
-            "A) Both paths equally—they're both critical",
-            "B) The path with activity D because it's longest",
-            "C) The path with activity A because it starts first",
-            "D) Neither—the paths are too short to matter"
-          ],
-          correct: 0,
-          explanation: "A is correct. When multiple paths have the same duration and are the longest, they're ALL critical paths. You must monitor both equally. Critical Path = longest path(s) through the network.",
-          hint: "What does 'Critical Path' mean? It's the LONGEST path. Can there be more than one?",
-          pitfall: "Many think there can only be ONE critical path, but multiple paths can be critical if they're equal and longest!"
-        },
-        {
-          question: "Your project is behind schedule. The sponsor wants you to complete it faster. You decide to add resources to critical path activities. What technique are you using?",
-          options: [
-            "A) Fast-Tracking",
-            "B) Crashing",
-            "C) Resource Leveling",
-            "D) Resource Smoothing"
-          ],
-          correct: 1,
-          explanation: "B is correct. Crashing = adding resources (usually costs more money). Fast-Tracking = doing activities in parallel that were planned in sequence (increases risk). Know the difference!",
-          hint: "What are you adding? Resources (money) or parallelism (risk)?",
-          pitfall: "Crashing vs Fast-Tracking is heavily tested! Crashing = add resources. Fast-Tracking = parallel work."
-        }
-      ],
-      14: [
-        {
-          question: "Your project has PV=$100,000, EV=$90,000, AC=$110,000. What is your CPI and what does it mean?",
-          options: [
-            "A) CPI=0.82, project is over budget",
-            "B) CPI=1.22, project is under budget",
-            "C) CPI=0.90, project is slightly over budget",
-            "D) CPI=1.10, project is on budget"
-          ],
-          correct: 0,
-          explanation: "A is correct. CPI = EV/AC = 90,000/110,000 = 0.82. CPI < 1.0 means OVER BUDGET (getting less value than you're spending). This is THE most tested EVM concept!",
-          hint: "CPI formula: EV/AC. What does it mean when it's less than 1?",
-          pitfall: "CPI < 1.0 = OVER BUDGET. SPI < 1.0 = BEHIND SCHEDULE. Don't mix them up!"
-        },
-        {
-          question: "If your CPI is 0.85 and you have $200,000 left in your budget, what is your realistic EAC (Estimate at Completion)?",
-          options: [
-            "A) $200,000 (original budget)",
-            "B) $235,294 (accounting for poor performance)",
-            "C) $170,000 (optimistic)",
-            "D) Cannot be calculated without BAC"
-          ],
-          correct: 3,
-          explanation: "D is correct. You need BAC (Budget at Completion) to calculate EAC. EAC = BAC/CPI. This tests if you actually understand the formulas, not just memorize them!",
-          hint: "What information is missing? Check what you need for the EAC formula.",
-          pitfall: "Don't fall for calculation questions that are missing critical data! Read carefully."
-        }
-      ],
-      21: [
-        {
-          question: "Your organization wants to minimize cost risk in a contract where the scope is well-defined. Which contract type should you recommend?",
-          options: [
-            "A) Cost Plus Fixed Fee (CPFF)",
-            "B) Time and Materials (T&M)",
-            "C) Firm Fixed Price (FFP)",
-            "D) Cost Plus Incentive Fee (CPIF)"
-          ],
-          correct: 2,
-          explanation: "C is correct. FFP (Firm Fixed Price) puts ALL cost risk on the SELLER. When scope is clear and the buyer wants to minimize their risk, FFP is ideal. The seller takes the risk of cost overruns.",
-          hint: "Who bears the risk in each contract type? Buyer or Seller?",
-          pitfall: "Fixed Price = Seller risk. Cost Reimbursable = Buyer risk. This is the #1 procurement concept!"
-        }
-      ]
-    };
-
-    // ========== BADGES ==========
-    const allBadges = [
-      { id: 'first_day', name: 'Journey Begins', icon: '🚀', description: 'Complete Day 1', unlocked: false },
-      { id: 'week_warrior', name: 'Week Warrior', icon: '⚔️', description: 'Complete 7 days', unlocked: false },
-      { id: 'people_master', name: 'People Master', icon: '👥', description: 'Pass People Domain Boss', unlocked: false },
-      { id: 'process_master', name: 'Process Master', icon: '⚙️', description: 'Pass Process Domain Boss', unlocked: false },
-      { id: 'evm_expert', name: 'EVM Expert', icon: '📊', description: 'Ace EVM questions', unlocked: false },
-      { id: 'risk_champion', name: 'Risk Champion', icon: '🎯', description: 'Master risk strategies', unlocked: false },
-      { id: 'perfect_quiz', name: 'Perfectionist', icon: '💯', description: 'Score 100% on a quiz', unlocked: false },
-      { id: 'streak_5', name: 'On Fire', icon: '🔥', description: '5-day streak', unlocked: false },
-      { id: 'level_5', name: 'Expert', icon: '🎓', description: 'Reach Level 5', unlocked: false },
-      { id: 'pmp_ready', name: 'PMP Ready', icon: '🏆', description: 'Complete all 30 days', unlocked: false }
-    ];
-
-    // ========== STATE MANAGEMENT ==========
+    // ========== STATE ==========
     let currentDay = 1;
     let xp = 0;
     let level = 1;
-    let streak = 0;
-    let badges = [];
     let completedDays = [];
-    let showQuiz = false;
-    let quizScore = 0;
-    let currentQuestion = 0;
-    let selectedAnswer = null;
-    let showExplanation = false;
-    let hearts = 3;
-    let powerUps = { hints: 3, skipQuestion: 2 };
-    let showHint = false;
 
-    // ========== LOAD STATE FROM LOCAL STORAGE ==========
-    const loadState = () => {
+    // ========== SAVE/LOAD ==========
+    function loadState() {
       const saved = localStorage.getItem('pmpQuestState');
       if (saved) {
         const state = JSON.parse(saved);
         currentDay = state.currentDay || 1;
         xp = state.xp || 0;
         level = state.level || 1;
-        streak = state.streak || 0;
-        badges = state.badges || [];
         completedDays = state.completedDays || [];
       }
-      updateUI();
-    };
+    }
 
-    // ========== SAVE STATE TO LOCAL STORAGE ==========
-    const saveState = () => {
-      const state = { currentDay, xp, level, streak, badges, completedDays };
+    function saveState() {
+      const state = { currentDay, xp, level, completedDays };
       localStorage.setItem('pmpQuestState', JSON.stringify(state));
-    };
+    }
 
-    // ========== UPDATE UI ==========
-    const updateUI = () => {
-      // Update header stats
-      document.getElementById('level').textContent = level;
+    // ========== EVENT BINDING ==========
+    function bindEvents() {
+      document.getElementById('start-quiz-btn')?.addEventListener('click', () => {
+        // For Day 1: Just mark complete and show full lesson
+        if (!completedDays.includes(1)) {
+          completedDays.push(1);
+          xp += 150;
+          saveState();
+          alert('🎉 Day 1 marked complete! 150 XP earned!');
+        }
+        // Show full Day 1 lesson in a new tab or replace content
+        document.getElementById('main-content').innerHTML = day1Content;
+        document.querySelector('h1').innerHTML += ' <button onclick="window.location.reload()" class="ml-4 text-sm bg-white text-purple-900 px-3 py-1 rounded">← Back to Tracker</button>';
+      });
+    }
+
+    // ========== INIT ==========
+    function init() {
+      loadState();
       document.getElementById('xp').textContent = xp;
+      document.getElementById('level').textContent = level;
       document.getElementById('next-level-xp').textContent = level * 1000;
       document.getElementById('xp-progress').style.width = `${(xp % 1000) / 10}%`;
-      document.getElementById('streak').textContent = streak;
-      document.getElementById('badges-count').textContent = badges.length;
+      
+      // Render Day 1 card
+      document.getElementById('day-card').innerHTML = `
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <div class="text-sm font-bold text-white/80 mb-1">DAY 1 • PEOPLE DOMAIN</div>
+            <h2 class="text-3xl font-bold mb-2">Conflict Resolution & Leadership</h2>
+            <div class="text-white/90 mb-4">⭐⭐</div>
+          </div>
+          <div class="text-right">
+            <div class="text-sm text-white/80">Reward</div>
+            <div class="text-2xl font-bold">+150 XP</div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <button id="start-quiz-btn" class="flex-1 bg-white text-purple-900 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg">
+            🎮 Start Learning Quest
+          </button>
+        </div>
+      `;
+      
+      // Bind events AFTER content is rendered
+      setTimeout(bindEvents, 100);
+    }
 
-      // Update current day card
-      const dayInfo = curriculum[currentDay - 1];
-      document.getElementById('current-day-num').textContent = currentDay;
-      document.getElementById('current-domain').textContent = dayInfo.domain.toUpperCase();
-      document.getElementById('day-title').textContent = dayInfo.title;
-      document.getElementById('difficulty').textContent = dayInfo.difficulty;
-      document.getElementById('critical-tag').classList.toggle('hidden', !dayInfo.difficulty.includes('⭐⭐⭐⭐⭐'));
-      document.getElementById('xp-reward').textContent = dayInfo.xpReward;
-      document.getElementById('activity').textContent = dayInfo.activity;
-      document.getElementById('pitfall').textContent = dayInfo.commonPitfall;
-
-      // Update concepts
-      const conceptsDiv = document.getElementById('concepts');
-      conceptsDiv.innerHTML = '';
-      dayInfo.concepts.forEach(concept => {
-        const span = document.createElement('span');
-        span.className = 'bg-white/20 px-3 py-1 rounded-full text-sm';
-        span.textContent = concept;
-        conceptsDiv.appendChild(span);
-      });
-
-      // Update journey map
-      const journeyMap = document.getElementById('journey-map');
-      journeyMap.innerHTML = '';
-      curriculum.forEach((day, idx) => {
-        const status = getDayStatus(idx + 1);
-        const isBoss = day.title.includes('BOSS') || day.title.includes('ULTIMATE');
-        const isCritical = day.title.includes('CRITICAL') || day.title.includes('ALERT');
-        
-        const button = document.createElement('button');
-        button.className = `day-card ${status === 'completed' ? 'day-completed' : ''} ${status === 'current' ? 'day-current' : ''} ${status === 'available' ? 'day-available' : ''} ${status === 'locked' ? 'day-locked' : ''} ${isBoss ? 'boss-day' : ''} ${isCritical ? 'critical-day' : ''}`;
-        button.onclick = () => status !== 'locked' && setCurrentDay(idx + 1);
-        button.disabled = status === 'locked';
-
-        if (status === 'completed') {
-          button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 6l-6-6-6 6"/></svg>';
-        } else if (status === 'locked') {
-          button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 15v3m-6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 0v3m6-3a3 3 0 116 0v3m-6-3a3 3 0 116 
+    // Start app
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
